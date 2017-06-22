@@ -14,10 +14,10 @@
 
 ## Installation
 ```shell
-npm i mint-ui -S
+npm i straw-ui -S
 
 # for Vue 1.x
-npm i mint-ui@1 -S
+npm i straw-ui@1 -S
 ```
 
 ## Usage
@@ -26,8 +26,8 @@ Import all components.
 
 ```javascript
 import Vue from 'vue';
-import Mint from 'mint-ui';
-import 'mint-ui/lib/style.css';
+import Mint from 'straw-ui';
+import 'straw-ui/lib/style.css';
 
 Vue.use(Mint);
 ```
@@ -35,7 +35,7 @@ Vue.use(Mint);
 Or import specified component. (Use [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component))
 
 ```javascript
-import { Cell, Checklist } from 'mint-ui';
+import { Cell, Checklist } from 'straw-ui';
 
 Vue.component(Cell.name, Cell);
 Vue.component(Checklist.name, Checklist);
@@ -46,15 +46,15 @@ Equals to
 
 ```javascript
 import Vue from 'vue';
-import Mint from 'mint-ui';
-import 'mint-ui/lib/style.css';
+import Mint from 'straw-ui';
+import 'straw-ui/lib/style.css';
 
 Vue.use(Mint);
 
 // import specified component
 
-import MtRadio from 'mint-ui/lib/radio';
-import 'mint-ui/lib/radio/style.css';
+import MtRadio from 'straw-ui/lib/radio';
+import 'straw-ui/lib/radio/style.css';
 
 Vue.component(MtRadio.name, MtRadio);
 ```
@@ -74,7 +74,7 @@ Usage
 ```json
 {
   "plugins": ["other-plugin", ["component", [
-    { "libraryName": "mint-ui", "style": true }
+    { "libraryName": "straw-ui", "style": true }
   ]]]
 }
 ```
@@ -82,13 +82,13 @@ Usage
 ## CDN
 RawGit
 
-- https://cdn.rawgit.com/ElemeFE/mint-ui/master/lib/index.js
-- https://cdn.rawgit.com/ElemeFE/mint-ui/master/lib/style.css
+- https://cdn.rawgit.com/ElemeFE/straw-ui/master/lib/index.js
+- https://cdn.rawgit.com/ElemeFE/straw-ui/master/lib/style.css
 
 NPMCDN
 
-- https://unpkg.com/mint-ui/lib/index.js
-- https://unpkg.com/mint-ui/lib/style.css
+- https://unpkg.com/straw-ui/lib/index.js
+- https://unpkg.com/straw-ui/lib/style.css
 
 ## Development
 
@@ -97,7 +97,7 @@ npm run dev
 ```
 
 ## Contribution
-Please make sure to read the [Contributing Guide](https://github.com/ElemeFE/mint-ui/blob/master/.github/CONTRIBUTING_en-us.md) before making a pull request.
+Please make sure to read the [Contributing Guide](https://github.com/ElemeFE/straw-ui/blob/master/.github/CONTRIBUTING_en-us.md) before making a pull request.
 
 ## License
 MIT
