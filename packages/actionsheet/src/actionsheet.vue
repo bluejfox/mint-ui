@@ -54,8 +54,8 @@
 </style>
 
 <script type="text/babel">
-  import Popup from 'mint-ui/src/utils/popup';
-  import 'mint-ui/src/style/popup.css';
+  import Popup from 'straw-ui/src/utils/popup';
+  import 'straw-ui/src/style/popup.css';
 
   export default {
     name: 'mt-actionsheet',

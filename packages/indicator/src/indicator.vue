@@ -54,9 +54,9 @@
 </style>
 
 <script type="text/babel">
-  import Spinner from 'mint-ui/packages/spinner/index.js';
+  import Spinner from 'straw-ui/packages/spinner/index.js';
   if (process.env.NODE_ENV === 'component') {
-    require('mint-ui/packages/spinner/style.css');
+    require('straw-ui/packages/spinner/style.css');
   }
 
   export default {

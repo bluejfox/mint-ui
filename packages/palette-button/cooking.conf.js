@@ -16,7 +16,7 @@ cooking.set({
 
 cooking.add('resolve.alias', {
   'main': path.join(__dirname, '../../src'),
-  'mint-ui': path.join(__dirname, '..')
+  'straw-ui': path.join(__dirname, '..')
 });
 
 cooking.add('externals', {
