@@ -81,6 +81,11 @@
         "path": "/palette-button",
         "name": "Palette Button",
         "icon": "alphabet"
+      },
+      {
+        "path": "/message",
+        "name": "Message",
+        "icon": "popup"
       }
     ]
   },
