@@ -1,7 +1,7 @@
 <template>
   <div>
     <popup v-model="value" position="top" :class="internalCustomClass" :modal="false">
-      <p>{{ message }}</p>
+      <p class="message-content">{{ message }}</p>
     </popup>
   </div>
 </template>
@@ -26,6 +26,9 @@
   }
   .mint-message-error {
     background-color: red !important;
+  }
+  .message-content {
+    margin: 0;
   }
 </style>
 <script type="text/babel">
