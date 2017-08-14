@@ -31,10 +31,11 @@ import DatetimePicker from '../packages/datetime-picker';
 import IndexList from '../packages/index-list';
 import IndexSection from '../packages/index-section';
 import PaletteButton from '../packages/palette-button';
+import Message from '../packages/message';
 import '../src/assets/font/iconfont.css';
 import merge from './utils/merge';
 
-const version = '0.1.2';
+const version = '0.1.3';
 const install = function(Vue, config = {}) {
   if (install.installed) return;
 
@@ -72,6 +73,7 @@ const install = function(Vue, config = {}) {
     attempt: 3
   }, config.lazyload));
 
+  Vue.$message = Vue.prototype.$message = Message;
   Vue.$messagebox = Vue.prototype.$messagebox = MessageBox;
   Vue.$toast = Vue.prototype.$toast = Toast;
   Vue.$indicator = Vue.prototype.$indicator = Indicator;
@@ -117,5 +119,6 @@ module.exports = {
   DatetimePicker,
   IndexList,
   IndexSection,
-  PaletteButton
+  PaletteButton,
+  Message
 };

@@ -22,6 +22,7 @@ const install = function(Vue, config = {}) {
     attempt: 3
   }, config.lazyload));
 
+  Vue.$message = Vue.prototype.$message = Message;
   Vue.$messagebox = Vue.prototype.$messagebox = MessageBox;
   Vue.$toast = Vue.prototype.$toast = Toast;
   Vue.$indicator = Vue.prototype.$indicator = Indicator;
@@ -61,6 +62,7 @@ ComponentNames.forEach(name => {
     'Lazyload',
 
       // services
+    'Message',
     'MessageBox',
     'Toast',
     'Indicator'
