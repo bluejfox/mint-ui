@@ -35,7 +35,7 @@ import Message from '../packages/message';
 import '../src/assets/font/iconfont.css';
 import merge from './utils/merge';
 
-const version = '0.1.3';
+const version = '0.1.4';
 const install = function(Vue, config = {}) {
   if (install.installed) return;
 

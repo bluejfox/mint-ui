@@ -45,39 +45,32 @@ const defaultCallback = () => {
   }
 };
 
-var initInstance = function() {
-  instance = new MessageConstructor({
-    el: document.createElement('div')
-  });
-
-  instance.callback = defaultCallback;
-};
-
 var showNextMsg = function() {
-  if (!instance) {
-    initInstance();
-  }
+  // if (!instance.value || instance.closeTimer) {
+  if (msgQueue.length > 0) {
+    currentMsg = msgQueue.shift();
 
-  if (!instance.value || instance.closeTimer) {
-    if (msgQueue.length > 0) {
-      currentMsg = msgQueue.shift();
-
-      var options = currentMsg.options;
-      for (var prop in options) {
-        if (options.hasOwnProperty(prop)) {
-          instance[prop] = options[prop];
-        }
+    var options = currentMsg.options;
+    var instanceOpt = {};
+    for (var prop in options) {
+      if (options.hasOwnProperty(prop)) {
+        instanceOpt[prop] = options[prop];
       }
-      if (options.callback === undefined) {
-        instance.callback = defaultCallback;
-      }
-      document.body.appendChild(instance.$el);
-
-      Vue.nextTick(() => {
-        instance.value = true;
-      });
     }
+    if (options.callback === undefined) {
+      instanceOpt.callback = defaultCallback;
+    }
+    instance = new MessageConstructor({
+      data: instanceOpt,
+      el: document.createElement('div')
+    });
+    document.body.appendChild(instance.$el);
+
+    Vue.nextTick(() => {
+      instance.value = true;
+    });
   }
+  // }
 };
 
 var Message = function(options, callback) {

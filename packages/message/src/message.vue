@@ -1,6 +1,6 @@
 <template>
   <div>
-    <popup v-model="value" position="top" :class="customClass" :modal="false">
+    <popup v-model="value" position="top" :class="internalCustomClass" :modal="false">
       <p>{{ message }}</p>
     </popup>
   </div>
@@ -49,12 +49,9 @@
         }
       };
     },
-    watch: {
-      type(val) {
-        console.log(val);
-        if (val !== '') {
-          this.customClass = `mint-message mint-message-${val}`;
-        }
+    computed: {
+      internalCustomClass() {
+        return `mint-message mint-message-${this.type}`;
       }
     },
     methods: {

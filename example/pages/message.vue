@@ -6,6 +6,7 @@
       <mt-button @click.native="showMessage('warning')" size="large">显示警告消息</mt-button>
       <mt-button @click.native="showMessage('info')" size="large">显示正常消息</mt-button>
       <mt-button @click.native="showMessage('error')" size="large">显示错误消息</mt-button>
+      <mt-button @click.native="showNoCloseMessage('no close')" size="large">显示不自动关闭消息</mt-button>
     </div>
   </div>
 </template>
@@ -31,6 +32,12 @@
     methods: {
       showMessage(type) {
         Message[type](type);
+      },
+      showNoCloseMessage(message) {
+        Message.info({
+          message,
+          duration: 0
+        });
       }
     }
   };
